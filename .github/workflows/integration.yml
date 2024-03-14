@@ -1,0 +1,14 @@
+name: Buil a NEXTJS web app
+on: push
+jobs:
+    build-proyect:
+        name: Buil an proyect
+        runs-on: ubuntu-latest
+        container: node:16
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4              
+            - run: npm install
+              name:  Install Dependencies
+            - run: npm run build
+              name: Run proyect
